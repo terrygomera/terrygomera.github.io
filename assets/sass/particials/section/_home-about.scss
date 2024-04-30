@@ -1,0 +1,336 @@
+.home-aboutus {
+    .home-aboutus-inner {
+        display: grid;
+        grid-template-columns: 25% auto;
+
+        .about-gallary {
+            text-align: right;
+
+            .figure-round-border {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .home-about-right {
+            padding-left: 10px;
+
+            .about-content {
+                display: flex;
+                align-items: center;
+
+                .about-top-right-img {
+                    margin-top: 56px;
+                    margin-bottom: 10px;
+                    flex-basis: 30%;
+                }
+
+                .section-head {
+                    flex-basis: 70%;
+                    padding-left: 20px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .about-detail {
+                display: flex;
+
+                // align-items: flex-end;
+                .about-bottom-right-img {
+                    flex-basis: 35%;
+                }
+
+                .about-detail-inner {
+                    flex-basis: 65%;
+                    padding-left: 70px;
+
+                    @include bp(lgx) {
+                        padding-left: 20px;
+                    }
+
+                    .about-list {
+                        border-radius: 25px;
+                        border-bottom: 3px solid $sub-secondary-color;
+                        background-color: #f8f8f8;
+                        padding: 25px;
+                        margin-bottom: 20px;
+
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style-type: none;
+
+                            li {
+                                margin-bottom: 12px;
+                                display: flex;
+                                align-items: center;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                i {
+                                    font-size: 25px;
+                                    color: #a7a7a7;
+                                }
+
+                                span {
+                                    color: $text-color;
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .author-content {
+                        display: flex;
+
+                        .auhtor-signature {
+                            width: 142px;
+                            margin-right: 20px;
+                        }
+
+                        .author-detail {
+                            .author-name {
+                                margin-bottom: 0px;
+                                margin-top: 8px;
+                            }
+
+                            .author-prof {
+                                font-size: 13px;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-about-place {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+        grid-column-gap: 80px;
+        position: relative;
+        z-index: 1;
+
+        .place-content {
+            border-radius: 25px;
+            padding: 40px 50px;
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            background-color: $light-color;
+
+            .place-icon {
+                a {
+                    i {
+                        background-color: $primary-color;
+                        color: $light-color;
+                        border-radius: 25px;
+                        height: 80px;
+                        width: 80px;
+                        line-height: 78px;
+                        font-size: 40px;
+                        text-align: center;
+                        transition: all 0.4s;
+
+                        &:hover,
+                        &:focus {
+                            color: $text-color;
+                        }
+                    }
+                }
+            }
+
+            .place-detail {
+                margin-left: 30px;
+
+                .place-title {
+                    margin-bottom: 10px;
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .place-time {
+            .place-icon {
+                a {
+                    i {
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(lgx) {
+        .home-about-place {
+            grid-column-gap: 30px;
+
+            .place-content {
+                padding: 40px 20px;
+            }
+        }
+    }
+
+    @include bp(mdx) {
+        .home-aboutus-inner {
+            grid-template-columns: auto;
+            grid-row-gap: 10px;
+
+            .about-gallary {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                .figure-round-border {
+                    flex-grow: 1;
+                    margin-right: 10px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .home-about-right {
+                padding-left: 0px;
+
+                .about-detail {
+                    .about-detail-inner {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .home-about-place {
+            grid-template-columns: auto;
+        }
+    }
+
+    @include bp(smx) {
+        .home-aboutus-inner {
+            .home-about-right {
+                padding-left: 0;
+
+                .about-detail {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .about-detail-inner {
+                        padding-left: 0;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+
+                        .author-content {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(xsx) {
+        .home-aboutus-inner {
+            grid-row-gap: 10px;
+
+            .about-gallary {
+                flex-wrap: wrap;
+
+                .figure-round-border {
+                    flex-grow: 1;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    flex-basis: 46%;
+
+                    &:last-child {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+
+                    &:nth-child(2) {
+                        order: 3;
+                        width: 100%;
+                        margin: 0;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .home-about-right {
+                .about-content {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .about-top-right-img {
+                        margin: 0px 0 20px;
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .section-head {
+                        padding-left: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .about-detail {
+                    .about-detail-inner {
+                        .about-list {
+                            padding: 25px 10px;
+
+                            ul {
+                                li {
+                                    i {
+                                        font-size: 20px;
+                                    }
+
+                                    span {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .home-about-place {
+            .place-content {
+                padding: 25px 20px;
+
+                .place-icon {
+                    a {
+                        i {
+                            height: 50px;
+                            width: 50px;
+                            line-height: 49px;
+                            font-size: 25px;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+
+                .place-detail {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

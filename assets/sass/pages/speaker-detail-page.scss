@@ -1,0 +1,367 @@
+.speaker-detail-section {
+    margin-bottom: 110px;
+
+    @include bp(mdx) {
+        margin-bottom: 60px;
+    }
+
+    .secondary {
+        .sidebar {
+            .author_widget {
+                padding: 50px;
+                background-color: $light-color;
+                text-align: center;
+                box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+                border-radius: 25px;
+                margin-bottom: 30px;
+
+                @include bp(smx) {
+                    padding: 40px 20px;
+                }
+
+                .avatar {
+                    margin-bottom: 20px;
+                    height: 134px;
+                    width: 134px;
+                    border: 8px solid #F8F8F8;
+                    border-radius: 50%;
+                    text-align: center;
+                    overflow: hidden;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .text-content {
+                    margin-bottom: 20px;
+
+                    .name-title {
+                        margin-bottom: 1px;
+                    }
+
+                    .profession {
+                        color: rgba(0, 0, 0, .5);
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: 1.2;
+                    }
+                }
+
+                .social-icon {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            display: inline-block;
+                            list-style-type: none;
+                            margin-right: 0px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            a {
+                                i {
+                                    font-size: 15px;
+                                    text-align: center;
+                                    height: 38px;
+                                    width: 38px;
+                                    line-height: 37px;
+                                    border-radius: 50%;
+                                    color: $light-color;
+                                    background-color: #787878;
+                                    transition: all 0.4s;
+
+                                    &:hover {
+                                        background-color: $hover-color;
+                                        position: relative;
+                                        transform: translatey(-7px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .skill-item {
+                .skill-container {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .skill-wrapper {
+                        margin-bottom: 25px;
+
+                        .skill-titile {
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            color: $text-color;
+                            margin: 0;
+
+                            @include bp(mdx) {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .progress-wrapper {
+                            padding-top: 0px;
+
+                            .ab-progress {
+                                .progress-indecator {
+                                    .progress-indecator-inner {
+                                        top: 2px;
+
+                                        .percent {
+                                            padding: 0;
+                                            left: -30px;
+                                            background-color: transparent;
+                                            line-height: 1;
+
+                                            &:before {
+                                                content: none;
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .progress-bar-wrap {
+                                    height: 15px;
+                                    border-radius: 25px;
+                                    background-color: #f8f8f8;
+                                    overflow: hidden;
+
+                                    .ab-progress-bar {
+                                        background-color: $primary-color;
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .primary {
+        .cv-container {
+            padding-left: 36px;
+
+            @include bp(lgx) {
+                padding-left: 0;
+                padding-top: 20px;
+            }
+
+            .title-divider {
+                padding-bottom: 7px;
+                margin-bottom: 22px;
+
+                &:before {
+                    width: 90px;
+                    height: 2px;
+                }
+            }
+
+            .biography-wrapper {
+                margin-bottom: 52px;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            .personal-info-warpper {
+                display: grid;
+                grid-template-columns: 55% 45%;
+
+                .personal-content {
+                    p {
+                        margin-bottom: 12px;
+                    }
+
+                    .quote-wrapper {
+                        position: relative;
+                        z-index: 1;
+                        background-color: transparent;
+                        padding-top: 40px;
+
+                        &:before {
+                            content: "\f10d";
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            font-size: 50px;
+                            color: #f8f8f8;
+                            z-index: -1;
+                        }
+                    }
+                }
+
+                .item-box {
+                    margin-left: 45px;
+                    padding: 30px;
+                    background-color: #f8f8f8;
+                    border-radius: 25px;
+                    margin-bottom: 0;
+
+                    ul {
+                        li {
+                            margin-bottom: 25px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            .item-title {
+                                color: $primary-color;
+                                margin-bottom: 10px;
+
+                            }
+
+                            span {
+                                font-size: 13px;
+                                font-weight: 700;
+                                color: $text-color;
+                            }
+                        }
+                    }
+
+                    @include bp(mdx) {
+                        padding: 30px 15px;
+                        margin-left: 10px;
+                    }
+                }
+
+                @include bp(smx) {
+                    grid-template-columns: auto;
+
+                    .item-box {
+                        margin-top: 20px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.meeting-session-section {
+    padding: 110px 0;
+    background-color: #f8f8f8;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .session-title {
+        margin-bottom: 60px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        h4 {
+            color: $light-color;
+            margin-bottom: 0;
+            padding: 15px 70px;
+            background-color: $primary-color;
+            border-radius: 25px;
+            display: inline-block;
+        }
+    }
+
+    .meeting-time {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+
+        .meeting-item {
+            background-color: $light-color;
+            padding: 40px 30px;
+            border-radius: 25px;
+
+            .meeting-duration {
+                margin-bottom: 25px;
+
+                .meeting-day {
+                    display: inline-block;
+                    margin-bottom: 5px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: $primary-color;
+                }
+
+                .session-time {
+                    font-family: $primary-font;
+                    line-height: 1.5;
+                    margin-bottom: 0;
+                }
+            }
+
+            .meeting-content {
+                a {
+                    .meeting-title {
+                        margin-bottom: 12px;
+                        transition: all 0.4s;
+                    }
+
+                    &:hover {
+                        .meeting-title {
+                            color: $hover-color;
+                        }
+                    }
+                }
+
+                .meeting-detail {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include bp(lgx) {
+            grid-column-gap: 10px;
+
+            .meeting-item {
+                padding: 40px 20px;
+            }
+        }
+
+        @include bp(mdx) {
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+
+            .meeting-item {
+                padding: 40px 30px;
+                max-width: 380px;
+            }
+
+            // .item-3 {
+            //  grid-column: 1/span2;
+            //  justify-content: center;
+            //  margin-left: auto;
+            //  margin-right: auto;
+            // }
+        }
+
+        @include bp(smx) {
+            grid-template-columns: auto;
+
+            .meeting-item {
+                padding: 40px 20px;
+            }
+
+            .item-3 {
+                grid-column: 1;
+                text-align: left;
+            }
+        }
+    }
+}

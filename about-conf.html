@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/img/eventum-fabicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" media="all">
+    <!-- Fonts Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/fontawesome/css/all.min.css">
+    <!-- Elmentkit Icon CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/elementskit-icon-pack/assets/css/ekiticons.css">
+    <!-- progress bar CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/progressbar-fill-visible/css/progressBar.css">
+    <!-- jquery-ui css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/jquery-ui/jquery-ui.min.css">
+    <!-- modal video css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/modal-video/modal-video.min.css">
+    <!-- light box css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/fancybox/dist/jquery.fancybox.min.css">
+    <!-- slick slider css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendors/slick/slick-theme.css">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Event-Detail – Eventum -Event & Conferenc HTML5 Template</title>
+</head>
+<style>
+    .home-aboutus .home-about-place {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 16px;
+        grid-column-gap: 36px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .home-aboutus .home-about-place .place-content {
+        border-radius: 25px;
+        padding: 0px 11px;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+
+    .home-aboutus .home-aboutus-inner .home-about-right .about-content {
+        display: block;
+        align-items: center;
+    }
+
+    .home-aboutus .home-aboutus-inner {
+        display: block;
+        grid-template-columns: 25% auto;
+    }
+
+    .home-aboutus .home-aboutus-inner .home-about-right .about-detail .about-detail-inner {
+        flex-basis: 100%;
+        padding-left: 0px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+        color: #000;
+        vertical-align: top;
+        /* Adjusts vertical alignment */
+    }
+
+    th {
+        background-color: #1d1c1c;
+        color: #ffffff !important;
+    }
+
+    th h6 {
+        color: #ffffff !important;
+    }
+</style>
+
+<body class="home">
+    <div id="siteLoader" class="site-loader ">
+        <div class="preloader-content">
+            <img src="assets/img/loader1.gif" alt="">
+        </div>
+    </div>
+    <div id="page" class="full-page">
+    <header class="site-header site-header-transparent">
+        <!-- header html start -->
+        <div class="top-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="header-contact-info">
+                            <ul>
+                                <!-- <li>
+                                    <a href="tel:+01(977)259912">
+                                        <span class="icon">
+                                            <i aria-hidden="true" class="icon icon-phone1"></i>
+                                        </span>
+                                        <div class="details-content">
+                                            <span class="content-title">PHONE NUMBER :</span>
+                                            <h6>+01 (977) 2599 12</h6>
+                                        </div>
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a href="mailto:cssthesec@africau.edu">
+                                        <span class="icon">
+                                            <i aria-hidden="true" class="icon icon-envelope3"></i>
+                                        </span>
+                                        <div class="details-content">
+                                            <span class="content-title">EMAIL ADDRESS :</span>
+                                            <h6>cssthesec@africau.edu</h6>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-md-end justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header" id="masthead">
+            <div class="container">
+                <div class="hb-group d-flex align-items-center justify-content-between">
+                    <div class="site-identity col-lg-3">
+                        <p class="site-title">
+                            <a href="index.html">
+                                <img src="assets/img/ubuntu.png" alt="logo">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="main-navigation col-lg-9 justify-content-between d-flex align-items-center">
+                        <nav id="navigation" class="navigation d-none d-lg-inline-block">
+                            <ul>
+                                <li class="current-menu-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Cfp</a>
+                                    <ul>
+                                        <li>
+                                            <a href="scope.html">Scope</a>
+                                        </li>
+                                        <li>
+                                            <a href="author-guideline.html">Author Guideline</a>
+                                        </li>
+                                        <li>
+                                            <a href="registration.html">Register</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="speakers.html">Speakers</a>
+                                </li>
+                                <li>
+                                    <a href="program.html">Program</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Venue</a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://africau.edu/about/" target="_blank">About Africa
+                                                University</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.trip.com/travel-guide/attraction/manicaland-1699507/tourist-attractions/">Mutare
+                                                Attractions</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-container"></div>
+        </div>
+    </header>
+        <main id="content" class="site-main">
+            <!-- Inner Banner html start-->
+            <section class="inner-banner-wrap">
+                <div class="inner-baner-container" style="background-image: url(assets/img/eventum-img1.jpg);">
+                    <div class="container">
+                        <div class="inner-banner-content">
+                            <h1 class="inner-title">ABOUT INAUGURAL UBUNTU CONFERENCE 2024</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="home-aboutus">
+                <div class="container">
+                    <div class="home-aboutus-inner">
+
+                        <div class="home-about-right">
+                            <div class="about-content">
+
+                                <div class="section-head">
+                                    <span class="section-sub-title ">INTRODUCTION</span>
+                                    <h4 class="section-title">
+                                        WELCOME TO INAUGURAL UBUNTU CONFERENCE
+                                    </h4>
+                                    <p class="section-paragraph">
+                                        We invite papers, panel proposals and poster presentations from academics,
+                                        scholars, and practitioners for the inaugural multi-disciplinary conference on
+                                        Ubuntu (Hunhu/Setso/Wutu) in the 4th Industrial Revolution.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-detail">
+
+                                <div class="about-detail-inner">
+                                    <div class="about-list">
+                                        <p class="section-paragraph">
+                                            This inaugural theory- and praxis-focused conference on Ubuntu and related
+                                            Indigenous concepts will be co-hosted by
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <i aria-hidden="true" class="icon icon-checkmark-circle"></i>
+                                                <span>
+                                                    Africa University’s College of Social Sciences, Humanities,
+                                                    Theology, and Education (CSSTHE)
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <i aria-hidden="true" class="icon icon-checkmark-circle"></i>
+                                                <span>
+                                                    Howard University’s Center for African Studies
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <i aria-hidden="true" class="icon icon-checkmark-circle"></i>
+                                                <span>
+                                                    Michigan State University’s Institute of Ubuntu
+                                                </span>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                    <div class="about-content" style="text-align: justify;">
+                                        <p class="section-paragraph">
+                                            Thought and Practice from 9-11 October 2024. It will be held in one of
+                                            Africa’s best kept touristic secrets: the picturesque city of Mutare,
+                                            nestled in the majestic Eastern Highlands of Zimbabwe.
+                                        </p>
+                                        <p class="section-paragraph">
+                                            Leading and emerging heritage studies scholars, scientists, political
+                                            scientists, cultural anthropologists, cultural artists, linguists,
+                                            archaeologists, economists, historians, theologians, philosophers, social
+                                            scientists, community leaders, and activists will explore the indigenous
+                                            Black African worldview known as Isintu/Chivanhu/Setso/Mila, which has now
+                                            been reduced to a simplistic (mis-)understanding of Ubuntu as universal
+                                            human decency or humaneness and interconnectedness (Umuntu ngumuntu
+                                            ngabantu).The more holistic and multi-pronged conceptualisation of Ubuntu
+                                            that will emerge from this conference will help establish how best the
+                                            concept and worldview salient in it can be deployed as the foundation
+                                            shaping relationships, knowledge, values, practices, and meaning-making
+                                            among people of African descent. Doing so provides the much-needed space to
+                                            capture, process, represent, and preserve both the experiences and ongoing
+                                            struggles for self-determination and self-expression among Black African and
+                                            other Indigenous communities.
+                                        </p>
+                                        <h5 class="title-divider">
+                                            THEME: UBUNTU IN THE 4TH INDUSTRIAL REVOLUTION (4IR)
+                                        </h5>
+                                        <p class="section-paragraph">
+                                            Whereas the globalised world has now entered the 4IR, it has been argued
+                                            that much of Black Africa is yet to fully experience, let alone benefit
+                                            from, any other previous industrial revolutions. Paradoxically, however,
+                                            dominant and hegemonic notions of that 4IR routinely refer to ‘Ubuntu’ as
+                                            the spirit in which that revolution is being conducted. The fact that Ubuntu
+                                            is a (A)Bantu/Vanhu/Batho/Watu word suggests that Black Africa is a (co-)
+                                            leader of the 4IR responsible for ensuring that it is human-centered,
+                                            ‘humane,’ and humanizing. Alternatively, it suggests Black African
+                                            complicity in and approval of that revolution.
+                                        </p>
+                                        <p class="section-paragraph">
+                                            Further, in this 4IR age, the emergence of dynamic tech-driven productivity,
+                                            the digitalization of life, and the prioritization of capital accumulation
+                                            have given rise to social problems peculiar to the 21st century. As economic
+                                            rationality takes precedence over social and human rationality, the wealth
+                                            gap between producers and consumers in the contemporary goods/services
+                                            market has widened. Economic choices have induced and normalised
+                                            dehumanizing discourses, policies, and practices at both micro and macro
+                                            levels of society, including but not limited to labour market relations,
+                                            administration of polities within and across borders, migration patterns and
+                                            human settlements, family structures, and spirituality. Now more than ever,
+                                            humanity must find solutions to the existential threat caused by the
+                                            increasing isolationism and individualism of unchecked profiteering
+                                        </p>
+                                        <p class="section-paragraph">
+                                            Delegates are therefore particularly encouraged to engage with the overarching theme of the conference. 
+                                        </p>
+
+                                    </div>
+                                    <div class="section-head text-center col-lg-8 offset-lg-2">
+                                        <span class="section-sub-title ">JOIN THE CONFERENCE</span>
+                                        <h3 class="section-title">
+                                            CONFERENCE SUBTHEMES
+                                        </h3>
+                                        <p class="section-paragraph">
+                                            Sub-themes include (but are not limited to) the following areas:
+                                        </p>
+                                    </div>
+                                    <table>
+
+                                        <tr>
+                                            <th>
+                                                <h6>Theorising Ubuntu</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Ubuntu and contemporary African identities</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Getting Black Africa out of bondage and into dominion</h6>
+                                            </th>
+                
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <ul>
+                                                    <li>Ubuntu (Hunhu/Botho/Wutu)</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila as matrix of Ubuntu/Hunhu/Setso/Wutu</li>
+                                                    <li>Humanising Black Africa and the Black African race-nations</li>
+                                                    <li>Ubuntu and decoloniality</li>
+                                                    <li>Ubuntu and knowledge</li>
+                                                    <li>Ubuntu and indigeneity</li>
+                                                    <li>Ubuntu as a geopolitical concept</li>
+                                                    <li>Ubuntu and Digitising the Humanities</li>
+                                                    <li>Ubuntu and STEM/STEAM</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ubuntu and being (A)Bantu/Vanhu/Batho/Watu</li>
+                                                    <li>Ubuntu and racial, ethnic, national, religious, and linguistic identities</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila, feminism, and LGBTQI+ agenda</li>
+                                                    <li>Ubuntu and the Decolonisation agenda</li>
+                                                    <li>Resolving the Black African identity crisis</li>
+                                                    <li>Ubuntu as a geopolitical tool of the (A)Bantu/Vanhu/Batho/Watu</li>
+                                                    <li>Ubuntu, globalisation, and internationalisation</li>
+                                                    <li>Ubuntu, Pan-Africanism, and Afrocentricity</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ubuntu and the Black African condition</li>
+                                                    <li>Ubuntu and hegemonic discourses of development</li>
+                                                    <li>Ubuntu and Artificial Intelligence (AI)</li>
+                                                    <li>Artificial Intelligence (AI) in Chivanhu/Setso/Isintu/Mila</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila innovation, science and technology</li>
+                                                    <li>Social protection and inclusion for the Black African peoples in the digital era
+                                                    </li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila and climate change</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <h6>Ubuntu and holistic well-being in the 4IR era</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Ubuntu, religion and spirituality in a digital age</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Politics and governance in the light of Ubuntu philosophy</h6>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                
+                                            <td>
+                                                <ul>
+                                                    <li>Ubuntu counselling models</li>
+                                                    <li>Ubuntu and Restorative Justice</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila inspired Social Programs and Mental Health and
+                                                        Well-being solutions</li>
+                                                    <li>Ubuntu and AI-driven Social Work interventions</li>
+                                                    <li>Behavioural finance, coping and stress management</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ubuntu and Indigenous/traditional religion</li>
+                                                    <li>African Christian anthropology in a digital age</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila spirituality and religiosity</li>
+                                                    <li>Reimagining Ubuntu theology in the digital era</li>
+                                                    <li>Ubuntu as a spirituality of liberation</li>
+                                                    <li>Ubuntu and Pastoral Care in a digital age</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Humane migrant management regimes</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila vs hegemonic discourses human rights, child rights,
+                                                        and animal rights</li>
+                                                    <li>Chivanhu/Setso/Isintu/Mila and ‘living for democracy’</li>
+                                                    <li>Decolonising International Relations and Diplomacy</li>
+                                                    <li>Ubuntu and African politics</li>
+                                                    <li>Defining and affirming interests of the Black African race-nations for a new
+                                                        geopolitical dispensation</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- event deatil html start-->
+
+            <!-- Event detail html start -->
+        </main>
+        <!-- footer part -->
+        <footer id="colophon" class="site-footer">
+            <div class="footer-overlay overlay"></div>
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row align-items-lg-center align-items-start">
+                        <div class="col-lg-4 col-sm-12">
+                            <aside class="widget widget_text img-textwidget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/ubuntu.png" alt="logo"></a>
+                                </div>
+                                <div class="textwidget widget-text">
+                                    We invite papers, panel proposals and poster presentations from academics, scholars,
+                                    and practitioners for the inaugural multi-disciplinary conference on Ubuntu
+                                    (Hunhu/Setso/Wutu) in the 4th Industrial Revolution.
+                                </div>
+                            </aside>
+                            <div class="footer-social-links" hidden>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.twitter.com/" target="_blank">
+                                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" target="_blank">
+                                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <aside class="widget">
+                                <h6 class="widget-title">Quick Links</h6>
+                                <ul>
+
+                                    <li>
+                                        <a href="scope.html">Scope</a>
+                                    </li>
+                                    <li>
+                                        <a href="author-guideline.html">Author Guideline</a>
+                                    </li>
+                                    <li>
+                                        <a href="registration.html">Register</a>
+                                    </li>
+                                    <li>
+                                        <a href="speakers.html">Speakers</a>
+                                    </li>
+                                    <li>
+                                        <a href="program.html">Program</a>
+                                    </li>
+
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <aside class="widget">
+                                <h6 class="widget-title">OTHER PAGES</h6>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://africau.edu/about/" target="_blank">About Africa University</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.trip.com/travel-guide/attraction/manicaland-1699507/tourist-attractions/">Mutare
+                                            Attractions</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="col-lg-4 col-sm-6" hidden>
+                            <aside class="widget widget_text footer-join-us text-center" hidden>
+                                <h6 class="widget-title">JOIN OUR NEWSLETTER</h6>
+                                <p class="textwidget">
+                                    Subscribe our newsletter to get latest news and update from us.
+                                </p>
+                                <form class="footer-form">
+                                    <input type="email" name="email" placeholder="Your Email..">
+                                    <button class="button-round-primary">SUBSCRIBE NOW</button>
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="bottom-footer">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="legal-list">
+                                <ul>
+                                    <li> <a href="contact.html">SUPPORT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5">
+                            <div class="copy-right">Copyright &copy; 2024 UBUNTU CONFERENCE. All rights reserved.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- back to top -->
+        <a id="backTotop" href="#" class="to-top-icon">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <!-- custom search field html -->
+        <div class="header-search-form" hidden>
+            <div class="container">
+                <div class="header-search-container">
+                    <form class="search-form" role="search" method="get">
+                        <input type="text" name="s" placeholder="Enter your text...">
+                    </form>
+                    <a href="#" class="search-close">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/vendors/jquery/jquery.js"></script>
+    <script src="assets/vendors/waypoint/jquery.waypoints.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendors/progressbar-fill-visible/js/progressBar.min.js"></script>
+    <script src="assets/vendors/countdown-date-loop-counter/loopcounter.js"></script>
+    <script src="assets/vendors/counterup/jquery.counterup.js"></script>
+    <script src="assets/vendors/modal-video/jquery-modal-video.min.js"></script>
+    <script src="assets/vendors/masonry/masonry.pkgd.min.js"></script>
+    <script src="assets/vendors/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/slick-nav/jquery.slicknav.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

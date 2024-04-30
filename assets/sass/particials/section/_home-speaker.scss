@@ -1,0 +1,116 @@
+.speaker-event-section {
+    margin: 106px 0 110px;
+
+    @include bp(mdx) {
+        margin: 60px 0;
+    }
+
+    .group-member {
+        .row {
+            row-gap: 42px;
+        }
+
+        .team-member {
+            border-radius: 25px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            .team-img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .team-member-info {
+                margin-top: -145px;
+                left: 0;
+                right: 0;
+                z-index: 0;
+                position: absolute;
+
+                .team-content {
+                    background-color: $light-color;
+                    border-radius: 25px;
+                    padding: 20px 20px 35px;
+                    display: block;
+                    margin-left: 20px;
+                    margin-right: 20px;
+
+                    .author-name {
+                        margin-bottom: 5px;
+
+                        a {
+                            transition: all 0.4s;
+
+                            &:hover {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+
+                    .author-prof {
+                        margin-bottom: 0;
+                        font-size: 13px;
+                        font-weight: 700;
+                        color: rgba(0, 0, 0, .5);
+                        line-height: 1.2;
+                    }
+                }
+
+                .social-icon {
+                    margin-top: -15px;
+                    text-align: center;
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+
+                        li {
+                            display: inline-block;
+                            transition: all 0.4s;
+
+                            &:first-child {
+                                padding-left: 0;
+                            }
+
+                            a {
+                                i {
+                                    height: 30px;
+                                    width: 30px;
+                                    line-height: 31px;
+                                    font-size: 12px;
+                                    background-color: $primary-color;
+                                    color: $light-color;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    transition: all 0.4s;
+                                }
+                            }
+
+                            &:hover {
+                                a {
+                                    i {
+                                        background-color: rgba($hover-color, 0.9);
+                                        position: relative;
+                                        transform: translatey(-10px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .event-speaker-btn {
+        margin-top: 50px;
+        text-align: center;
+
+        @include bp(mdx) {
+            margin-top: 32px;
+        }
+    }
+}

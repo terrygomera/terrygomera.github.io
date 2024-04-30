@@ -1,0 +1,317 @@
+.event-schedule-section {
+    padding: 110px 0;
+    background-color: #f8f8f8;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .week-title {
+        margin-bottom: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        h5 {
+            color: $light-color;
+            margin-bottom: 0;
+            padding: 20px 50px;
+            background-color: $primary-color;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        @include bp(smx) {
+            margin-bottom: 30px;
+
+            h5 {
+                padding: 20px 18px;
+            }
+        }
+    }
+
+    .first-day-schedule {
+        margin-bottom: 110px;
+
+        .first-day-routine-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 50px;
+            grid-column-gap: 60px;
+
+            .first-day-routine-detail {
+                border-radius: 25px;
+                text-align: center;
+                overflow: hidden;
+
+                .time-content {
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    flex-wrap: wrap;
+                    background-color: #fff2f7;
+
+                    .first-day-time-detail {
+                        flex-basis: 50%;
+                        padding: 48px 0;
+                        background-color: rgba($primary-color, 0.5);
+
+                        .time-title {
+                            font-size: 13px;
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            color: $light-color;
+                            display: block;
+                        }
+
+                        .subject-title {
+                            margin-bottom: 0;
+                            color: $light-color;
+                            display: block;
+                            font-size: 16px;
+                            font-weight: 500;
+                            font-family: $title-font;
+                        }
+                    }
+
+                    .lecture-image {
+                        flex-basis: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .author-img {
+                            margin-right: 20px;
+                            border-radius: 50%;
+                            text-align: center;
+                            height: 80px;
+                            width: 80px;
+                            overflow: hidden;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .first-day-routine-description {
+                    background-color: $light-color;
+                    padding: 40px;
+
+                    .chapter-link {
+                        margin-bottom: 0;
+
+                        a {
+                            font-size: 13px;
+                            color: $primary-color;
+
+                            &:hover {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include bp(lgx) {
+            .first-day-routine-content {
+                grid-column-gap: 20px;
+
+                .first-day-routine-detail {
+                    .time-content {
+                        .lecture-image {
+                            .author-img {
+                                margin-right: 10px;
+                                height: 70px;
+                                width: 70px;
+                            }
+                        }
+                    }
+
+                    .first-day-routine-description {
+                        padding: 40px 20px;
+                    }
+                }
+            }
+        }
+
+        @include bp(mdx) {
+            margin-bottom: 60px;
+
+            .first-day-routine-content {
+                grid-template-columns: auto;
+            }
+        }
+
+        @include bp(xsx) {
+            .first-day-routine-content {
+                .first-day-routine-detail {
+                    .time-content {
+                        .lecture-image {
+                            .author-img {
+                                height: 60px;
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .second-day-routine-content {
+        margin-top: 50px;
+
+        .routine-detail {
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 22% 55% 23%;
+            justify-content: center;
+            align-items: center;
+            background-color: $light-color;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(even) {
+                .time-detail {
+                    background-color: rgba($primary-color, 0.5);
+                }
+            }
+
+            .time-detail {
+                background-color: rgba($primary-color, 0.7);
+                text-align: center;
+                padding: 68px 30px;
+
+                .time-title {
+                    font-size: 13px;
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                    color: $light-color;
+                    display: inline-block;
+                }
+
+                .subject-title {
+                    margin-bottom: 0;
+                    color: $light-color;
+                }
+            }
+
+            .routine-description {
+                padding-left: 50px;
+                padding-right: 50px;
+
+                .ch-paragraph {
+                    margin-bottom: 10px;
+                }
+
+                .chapter-link {
+                    margin-bottom: 0;
+
+                    a {
+                        font-size: 13px;
+                        color: $primary-color;
+
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+
+            .lecture-image {
+                display: flex;
+                align-items: center;
+
+                .author-img {
+                    margin: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    height: 80px;
+                    width: 80px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        @include bp(lgx) {
+            .routine-detail {
+                grid-template-columns: 22% 48% 30%;
+
+                .routine-description {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .lecture-image {
+                    .author-img {
+                        margin: 0;
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include bp(mdx) {
+            .routine-detail {
+                grid-template-columns: 27% 58% 15%;
+
+                .lecture-image {
+                    flex-direction: column;
+
+                    .author-img {
+                        height: 55px;
+                        width: 55px;
+                        margin: 0;
+                        margin-bottom: 5px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include bp(smx) {
+            .routine-detail {
+                grid-template-columns: auto;
+
+                .time-detail {
+                    padding: 20px;
+                }
+
+                .routine-description {
+                    padding: 20px;
+                }
+
+                .lecture-image {
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    .author-img {
+                        height: 55px;
+                        width: 55px;
+                        margin: 0;
+                        margin-right: 5px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

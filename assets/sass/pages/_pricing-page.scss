@@ -1,0 +1,80 @@
+.pricing-page-section {
+    background-image: none;
+    background-color: #f8f8f8;
+}
+
+.price-booking {
+    margin-top: 110px;
+
+    .book-content {
+        display: flex;
+
+        .book-reason,
+        .booking-banner-image {
+            flex-basis: 50%;
+        }
+
+        .book-reason {
+            margin-right: 50px;
+
+            @include bp(lgx) {
+                margin-right: 20px;
+            }
+
+            .section-head {
+                margin-bottom: 35px;
+
+                @include bp(xsx) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .booking-banner-image {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            .overlay-circle {
+                background-image: url(assets/img/circle.png);
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0.5;
+            }
+
+            img {
+                width: 60%;
+
+                @include bp(lgx) {
+                    width: 100%;
+                }
+                @include bp(mdx) {
+                    width: 60%;
+                }
+
+                @include bp(smx) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include bp(mdx) {
+        margin-top: 60px;
+
+        .book-content {
+            flex-wrap: wrap;
+            row-gap: 20px;
+
+            .book-reason,
+            .booking-banner-image {
+                flex-basis: 100%;
+            }
+
+            .book-reason {
+                margin-right: 0px;
+            }
+        }
+    }
+}

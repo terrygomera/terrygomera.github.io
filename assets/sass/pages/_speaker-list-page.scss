@@ -1,0 +1,10 @@
+.reservation-section {
+	padding: 110px 0;
+	background-color: rgba($primary-color, 0.1);
+	@include bp(mdx){
+		padding: 60px 0;
+	}
+	.section-head {
+		margin-bottom: 30px;
+	}
+}

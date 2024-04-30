@@ -1,0 +1,102 @@
+%base-button {
+	@include font-size (16);
+	line-height: 1.2;
+	padding: 16px 31px;
+	font-weight: 500;
+	font-family: $title-font;
+	text-transform: uppercase;
+	@include bp(mdx) {
+		font-size: 14px;
+	}
+	@include bp(smx) {
+		padding: 12px 20px;
+	}
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 16px 31px;
+	font-weight: 500;
+	@include border-radius(25px);
+	@include transition(background-color 0.3s);
+	border: none;
+	background-color: $primary-color;
+	background-size: 400%;
+	background-position: left;
+	transition: background-position 0.4s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+    	background-color: $hover-color;
+    	background-position: right;
+    }
+}
+
+.button-round-primary,
+.button-round-secondary,
+.button-round-white,
+.button-round-white-transparent,
+.button-round-primary-transparent{
+	@include border-radius(25px);
+	border: none;
+	@extend %base-button;
+	color: $primary-color;
+	display: inline-block;
+	position: relative;
+	border: 1px solid $light-color;
+	@include transition(background-color 0.4s, color 0.4s, border 0.4s);
+}
+.button-round-primary {
+	background-color: $primary-color;
+	color: $light-color;
+	border-color: $primary-color;
+}
+.button-round-secondary {
+	background-color: $secondary-color;
+	color: $light-color;
+	border-color: $secondary-color;
+}
+.button-round-white {
+	background-color: $light-color;
+	color: #111111;
+	border-color: $dark-color;
+}
+.button-round-white-transparent {
+	border: 1px solid $light-color;
+	color: $light-color;
+}
+.button-round-primary-transparent {
+	border: 1px solid $primary-color;
+	color: $primary-color;
+}
+
+// button hover
+.button-round-primary,
+.button-round-secondary,
+.button-round-white,
+.button-round-white-transparent,
+.button-round-primary-transparent {
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $hover-color;
+		border-color: $hover-color;
+		color: $light-color;
+	}
+}
+.button-text {
+	color: #0E3500;
+	font-weight: 600;
+	position: relative;
+	line-height: 1.2;
+	@include transition(all 0.4s);
+	&:hover,
+	&:focus,
+	&:active {
+		color: $primary-color;
+	}
+}

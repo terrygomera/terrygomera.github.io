@@ -1,0 +1,251 @@
+.home-schedule-section {
+    padding: 110px 0;
+    background-color: #f8f8f8;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .section-head {
+        margin-bottom: 0;
+
+        @include bp(lgx) {
+            text-align: center;
+        }
+    }
+
+    .time-circle-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        @include bp(lgx) {
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .time-info {
+            padding: 55px 30px 40px 30px;
+            background-color: rgba(217, 217, 217, 0.64);
+            text-align: center;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+
+            @include bp (mdx) {
+                padding: 40px 30px;
+            }
+
+            @include bp (xsx) {
+                padding: 30px;
+            }
+
+            &:nth-child(odd) {
+                margin-top: 80px;
+            }
+
+            &:first-child {
+                margin-right: -40px;
+            }
+
+            &:nth-child(2) {
+                background-color: rgba($primary-color, 0.64);
+                margin-right: -40px;
+
+                .time-txt {
+
+                    h5,
+                    h6 {
+                        color: $light-color;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                background-color: rgba($secondary-color, 0.64);
+
+                .time-txt {
+
+                    h5,
+                    h6 {
+                        color: $light-color;
+                    }
+                }
+            }
+
+
+            .time-txt {
+                h5 {
+                    margin-bottom: 5px;
+                }
+
+                h6 {
+                    margin-bottom: 10px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .routine-content {
+        margin-top: 50px;
+
+        .routine-detail {
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 22% 55% 23%;
+            justify-content: center;
+            align-items: center;
+            background-color: $light-color;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(even) {
+                .time-detail {
+                    background-color: rgba($primary-color, 0.7);
+                }
+            }
+
+            .time-detail {
+                background-color: rgba($primary-color, 0.5);
+                text-align: center;
+                padding: 68px 30px;
+
+                .time-title {
+                    font-size: 13px;
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                    color: $light-color;
+                    display: inline-block;
+                }
+
+                .subject-title {
+                    margin-bottom: 0;
+                    color: $light-color;
+                }
+            }
+
+            .routine-description {
+                padding-left: 50px;
+                padding-right: 50px;
+
+                .ch-paragraph {
+                    margin-bottom: 10px;
+                }
+
+                .chapter-link {
+                    margin-bottom: 0;
+
+                    a {
+                        font-size: 13px;
+                        color: $primary-color;
+
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+
+            .lecture-image {
+                display: flex;
+                align-items: center;
+
+                .author-img {
+                    margin: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    height: 80px;
+                    width: 80px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        @include bp(lgx) {
+            .routine-detail {
+                grid-template-columns: 22% 48% 30%;
+
+                .routine-description {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .lecture-image {
+                    .author-img {
+                        margin: 0;
+                        margin-right: 10px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include bp(mdx) {
+            .routine-detail {
+                grid-template-columns: 27% 58% 15%;
+
+                .lecture-image {
+                    flex-direction: column;
+
+                    .author-img {
+                        height: 55px;
+                        width: 55px;
+                        margin: 0;
+                        margin-bottom: 5px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include bp(smx) {
+            .routine-detail {
+                grid-template-columns: auto;
+
+                .time-detail {
+                    padding: 20px;
+                }
+
+                .routine-description {
+                    padding: 20px;
+                }
+
+                .lecture-image {
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    .author-img {
+                        height: 55px;
+                        width: 55px;
+                        margin: 0;
+                        margin-right: 5px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .schedule-btn {
+        margin-top: 50px;
+        text-align: center;
+    }
+}

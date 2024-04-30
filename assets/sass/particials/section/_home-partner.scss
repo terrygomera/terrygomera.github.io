@@ -1,0 +1,85 @@
+.home-partner {
+    padding: 106px 0 110px;
+    background-image: url(assets/img/eventum-img1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .overlay {
+        background-color: #223645;
+        opacity: 0.85;
+    }
+
+    .inner-partner-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        transition: all 0.5s;
+        align-items: center;
+
+        .partner-logo {
+            padding: 20px;
+            border-style: solid;
+            border-width: 0px 1px 0px 0px;
+            border-color: #787878;
+            text-align: center;
+            color: white;
+
+            &:nth-child(-n+5) {
+                border-width: 0px 1px 1px 0px;
+            }
+
+            &:nth-child(5) {
+                border-width: 0px 0px 1px 0px;
+            }
+
+            &:last-child {
+                border-width: 0px 0px 0px 0px;
+            }
+        }
+
+        @include bp(mdx) {
+            grid-template-columns: repeat(2, 1fr);
+            .partner-logo {
+                &:nth-child(-n+5) {
+                    border-width: 1px 1px 1px 1px;
+                }
+
+                &:nth-child(5) {
+                    border-width: 1px 1px 1px 1px;
+                }
+
+                &:last-child {
+                    border-width: 1px 1px 1px 1px;
+                }
+                &:nth-child(odd) {
+                    border-width:0 1px 1px 1px;
+                }
+                &:nth-child(even) {
+                    border-width:0 1px 1px 0px;
+                }
+                &:nth-child(1) {
+                    border-width: 1px 1px 1px 1px;
+                }
+                &:nth-child(2) {
+                    border-width: 1px 1px 1px 0px;
+                }
+            }
+        }
+        @include bp(smx) {
+            .partner-logo {
+                padding: 10px;
+            }
+        }
+    }
+
+    .sponser-btn {
+        margin-top: 50px;
+        text-align: center;
+    }
+}

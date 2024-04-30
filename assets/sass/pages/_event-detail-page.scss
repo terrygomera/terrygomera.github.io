@@ -1,0 +1,303 @@
+.event-detail-section {
+    margin-bottom: 110px;
+
+    @include bp(mdx) {
+        margin-bottom: 60px;
+    }
+
+    .right-sidebar {
+        padding-right: 56px;
+
+        @include bp(lgx) {
+            padding-right: 0;
+        }
+
+        .feature-image {
+            position: relative;
+            z-index: 0;
+            background-image: url(assets/img/eventum-img9.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            min-height: 370px;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            .video-button {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .single-event-content-wrap {
+            margin-bottom: 20px;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .author-comment {
+            display: flex;
+            padding: 30px;
+            margin-bottom: 35px;
+            background-color: #f8f8f8;
+            border-radius: 25px;
+
+            .quote-icon {
+                margin-right: 30px;
+
+                i {
+                    color: #d9d9d9;
+                    font-size: 50px;
+                }
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            @include bp(smx) {
+                padding: 10px;
+
+                .quote-icon {
+                    margin-right: 10px;
+
+                    i {
+                        font-size: 30px;
+                    }
+                }
+
+            }
+        }
+
+        .keypoint-inner {
+            .key-point-desc {
+                margin-bottom: 20px;
+            }
+
+            .key-point-list {
+                .row {
+                    @include bp(smx) {
+                        row-gap: 10px;
+                    }
+                }
+
+                .item-list {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            list-style-type: none;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 10px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            i {
+                                font-size: 14px;
+                                margin-right: 10px;
+                                color: $primary-color;
+                            }
+
+                            span {
+                                color: $text-color;
+                                font-family: $title-font;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 1.2;
+
+                                @include bp(mdx) {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .secondary {
+        .sidebar {
+            .author_widget {
+                padding: 50px;
+                background-color: $light-color;
+                text-align: center;
+                box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+                border-radius: 25px;
+
+                @include bp(smx) {
+                    padding: 40px 20px;
+                }
+
+                .avatar {
+                    margin-bottom: 20px;
+                    height: 134px;
+                    width: 134px;
+                    border: 8px solid #F8F8F8;
+                }
+
+                .text-content {
+                    margin-bottom: 20px;
+
+                    .name-title {
+                        margin-bottom: 1px;
+                    }
+
+                    .profession {
+                        color: rgba(0, 0, 0, .5);
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: 1.2;
+                    }
+                }
+
+                .social-icon {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            display: inline-block;
+                            list-style-type: none;
+                            margin-right: 0px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            a {
+                                i {
+                                    font-size: 15px;
+                                    text-align: center;
+                                    height: 38px;
+                                    width: 38px;
+                                    line-height: 37px;
+                                    border-radius: 50%;
+                                    color: $light-color;
+                                    background-color: #787878;
+                                    transition: all 0.4s;
+
+                                    &:hover {
+                                        background-color: $hover-color;
+                                        position: relative;
+                                        transform: translatey(-7px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .event-info-package {
+                background-color: #f8f8f8;
+                border-radius: 25px;
+                padding: 35px;
+
+                @include bp(smx) {
+                    padding: 20px 10px;
+                }
+
+                .event-time-detail {
+                    ul {
+                        li {
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            color: $text-color;
+                            font-family: $title-font;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            margin-bottom: 12px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            @include bp(mdx) {
+                                font-size: 13px;
+                            }
+
+                            i {
+                                font-size: 14px;
+                                color: $primary-color;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .extra-event {
+                position: relative;
+                border-radius: 25px;
+                background-image: url(assets/img/eventum-img1.jpg);
+                background-repeat: no-repeat;
+                background-position: center 59%;
+                background-size: cover;
+                z-index: 1;
+                text-align: center;
+                color: $light-color;
+                overflow: hidden;
+                padding: 35px;
+
+                @include bp(smx) {
+                    padding: 20px 10px;
+                }
+
+                .overlay {
+                    background-color: $secondary-color;
+                    opacity: 0.85;
+                    z-index: -1;
+                }
+
+                .title-divider-center {
+                    color: $light-color;
+                }
+
+                .event-list {
+                    padding-top: 10px;
+
+                    ul {
+                        li {
+                            padding-bottom: 12px;
+                            margin-bottom: 12px;
+                            border-bottom: 1px solid #787878;
+                            text-align: center;
+
+                            &:last-child {
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+                                border-bottom: none;
+                            }
+
+                            h6 {
+                                margin-bottom: 0;
+
+                                a {
+                                    color: $light-color;
+                                    transition: all 0.4s;
+
+                                    &:hover {
+                                        color: $hover-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

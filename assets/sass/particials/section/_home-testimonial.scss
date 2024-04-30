@@ -1,0 +1,77 @@
+.home-testimonial {
+    padding: 106px 0;
+    background-color: #f8f8f8;
+
+    @include bp(mdx) {
+        padding: 60px 0;
+    }
+
+    .section-head {
+        padding: 0 25px;
+
+        @include bp(lgx) {
+            padding: 0;
+        }
+    }
+
+
+    .testimonial-slider {
+        .slick-arrow {
+            &:before {
+                font-size: 40px;
+                color: #a7a7a7;
+                background-color: transparent;
+            }
+
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .client-content {
+            text-align: center;
+            padding: 0 100px;
+
+            @include bp(lgx) {
+                padding: 0;
+            }
+
+            .client-img {
+                border-radius: 50%;
+                overflow: hidden;
+                text-align: center;
+                margin: 0 auto 25px;
+                height: 120px;
+                width: 120px;
+            }
+
+            .client-detail {
+                .client-txt {
+                    margin-bottom: 25px;
+                    padding: 0 52px;
+                    font-style: italic;
+
+                    @include bp(smx) {
+                        padding: 0 15px;
+                    }
+                }
+
+                .client-name,
+                .client-prof {
+                    margin-bottom: 0;
+                    font-style: italic;
+                }
+
+                .client-prof {
+                    color: $primary-color;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

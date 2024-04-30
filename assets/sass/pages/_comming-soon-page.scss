@@ -1,0 +1,178 @@
+.comming-soon-section {
+    background-size: cover;
+    background-position: center center;
+    @include flexbox;
+    @include align-items(center);
+    position: relative;
+    * {
+        color: $light-color;
+    }
+    .primary-color {
+        color: $primary-color;
+    }
+    .overlay {
+        background-color: $secondary-color;
+        opacity: 0.7;
+        z-index: 1;
+    }
+    .comming-soon-wrap {
+        color: $light-color;
+        position: relative;
+        z-index: 2;
+    }
+    .site-identity {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    .comming-soon-content {
+        margin-top: 70px;
+        margin-bottom: 40px;
+        text-align: center;
+        h2 {
+            @include font-size(60);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+            &:after {
+                background-color: #d9d9d9;
+                content: "";
+                width: 90px;
+                height: 5px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 24px;
+            }
+        }
+        h5 {
+            text-transform: capitalize;
+        }
+    }
+    .time-counter-wrap {
+        margin-bottom: 70px;
+    }
+    .time-counter {
+        @include flexbox;
+        @include justify-content(center);
+        @include flex-wrap(wrap);
+        text-align: center;
+        .counter-time {
+            width: 148px;
+            margin:0 12px;
+            padding: 25px ;
+            border-radius: 25px;
+            border: 1px solid rgba($light-color, 0.3);
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            span {
+                font-size: 16px;
+                color: #fff;
+                display: block;
+                font-weight: 500;
+                line-height: 1.7;
+            }
+            [class*="counter-"] {
+                color: $light-color;
+                @include font-size(50);
+                font-family: $title-font;
+                font-weight: 700;
+                line-height: 1.1;
+            }
+        }
+    }
+    .social-icons {
+        text-align: center;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 3px;
+        }
+        a {
+            background-color: $primary-color;
+            @include font-size(17);
+            @include border-radius(100%);
+            color: $light-color;
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 39px;
+            @include transition(all 0.4s);
+            &:hover {
+                background-color: $hover-color;
+                border-color: $hover-color;
+                color: $light-color;
+            }
+        }
+    }
+    .com-contact-info {
+        ul {
+            @include font-size(0);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                @include font-size(16);
+                padding: 0 10px;
+                &:last-child {
+                    padding-right: 0;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                [class*="fa-"] {
+                    margin-right: 5px;
+                }
+                a {
+                    color: darken($light-color, 1%);
+                    display: block;
+                    @include transition(color 0.4s linear);
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+    @include bp(xl) {
+        height: 100vh;
+    }
+    @include bp(xlx) {
+        padding: 30px 0;
+    }
+    @include bp(lgx) {
+        .comming-soon-footer {
+            text-align: center;
+        }
+        .com-contact-info {
+            margin-bottom: 20px;
+        }
+        .time-counter {
+            .counter-time {
+                [class*="counter-"] {
+                    @include font-size(42);
+                }
+            }
+        }
+    }
+    @include bp(smx) {
+        .comming-soon-content {
+            h2 {
+                @include font-size(30);
+            }
+        }
+    }
+}

@@ -1,0 +1,175 @@
+.faq-page-container {
+    padding-bottom: 110px;
+
+    @include bp(mdx) {
+        padding-bottom: 60px;
+    }
+
+    .faq-content-wrap {
+        @include bp(lg) {
+            padding-left: 20px;
+        }
+    }
+
+    .section-head {
+        p {
+            margin-bottom: 30px;
+            color: $text-color;
+        }
+    }
+}
+
+.qsn-form-container {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 50px 40px;
+    border-radius: 25px;
+
+    h4 {
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+
+    .form-info {
+        text-align: center;
+    }
+
+    form {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    input {
+        padding: 15px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #414141;
+
+        &:not([type="submit"]) {
+            min-height: 55px;
+            width: 100%;
+        }
+    }
+
+    textarea {
+        padding: 15px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #414141;
+    }
+
+    input[type="submit"] {
+        background-color: $primary-color;
+        text-align: left;
+        color: $light-color;
+        text-transform: capitalize;
+        font-family: $title-font;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.2;
+        padding: 16px 60px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    @include bp(lg) {
+        margin-left: 60px;
+    }
+
+    @include bp(lgx) {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+    @include bp(xsx) {
+        padding: 30px 20px;
+    }
+}
+
+.faq-testimonial {
+    .faq-image {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+
+        .overlay-circle {
+            background-image: url(assets/img/circle.png);
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.2;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .testimonial-content {
+        background-color: $primary-color;
+        color: $light-color;
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-top: -80px;
+        padding: 30px;
+        position: relative;
+        border-radius: 25px;
+        z-index: 2;
+
+        @include bp(lgx) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: $light-color;
+        }
+
+        p {
+            color: $light-color;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include bp(xsx) {
+            padding: 20px 15px;
+
+            i {
+                font-size: 30px;
+                margin-bottom: 10px;
+                line-height: 1;
+            }
+        }
+    }
+
+    @include bp(lgx) {
+        margin-bottom: 40px;
+    }
+}
+
+.faq-content-wrap {
+    margin-left: 20px;
+
+    @include bp(lgx) {
+        margin-left: 0;
+    }
+
+    .section-head {
+        margin-bottom: 45px;
+    }
+}

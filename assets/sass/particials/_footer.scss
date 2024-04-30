@@ -1,0 +1,265 @@
+.site-footer {
+    background-image: url(assets/img/eventum-img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center 59%;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    .footer-overlay {
+        z-index: -1;
+        background-color: #223645;
+        opacity: 0.85;
+    }
+
+    .top-footer {
+        padding-top: 90px;
+        padding-bottom: 40px;
+
+        @include bp(lgx) {
+            padding-top: 60px;
+        }
+
+        .textwidget {
+            font-size: 15px;
+            color: #d9d9d9;
+            line-height: 1.6;
+
+            @include bp(smx) {
+                font-size: 13px;
+            }
+        }
+
+        .img-textwidget {
+            padding-right: 0px;
+
+            @include bp(mdx) {
+                padding-right: 0;
+            }
+        }
+
+        .title-divider-right {
+            margin-bottom: 30px;
+            color: $light-color;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.1;
+            text-transform: capitalize;
+
+            &:after {
+                background-color: $secondary-color;
+                height: 2px;
+                width: 50px;
+            }
+        }
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-social-links {
+        margin-top: 20px;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0 1px;
+                display: inline-block;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    background-color: $primary-color;
+                    color: $light-color;
+                    border-radius: 100%;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 34px;
+                    text-align: center;
+                    display: block;
+                    font-size: 14px;
+                    @include transition(all 0.3s);
+                    font-size: 13px;
+
+                    &:hover {
+                        background-color: $hover-color;
+                        color: $light-color;
+                        border-color: $hover-color;
+                    }
+                }
+            }
+        }
+
+        @include bp(mdx) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include bp(smx) {
+
+        .top-footer {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .bottom-footer {
+            margin-top: 0;
+        }
+    }
+
+    .bottom-footer {
+        padding: 16px 0;
+        border-top: 1px solid rgba($light-color, 0.06);
+
+        .legal-list {
+            @include bp(mdx) {
+                text-align: center;
+                margin-bottom: 6px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                line-height: 1;
+
+                li {
+                    display: inline-block;
+                    padding: 0 15px;
+                    position: relative;
+
+                    @include bp(xsx) {
+                        padding: 0 10px;
+                    }
+
+                    &:before {
+                        content: "|";
+                        right: -4px;
+                        top: 0px;
+                        color: rgba(248, 248, 248, 0.29);
+                        font-size: 13px;
+                        line-height: 1;
+                        position: absolute;
+
+                        @include bp(mdx) {
+                            line-height: 1;
+                        }
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+
+                        &:before {
+                            content: none;
+                        }
+                    }
+
+                    a {
+                        text-align: center;
+                        color: #d9d9d9;
+                        font-size: 13px;
+                        margin-bottom: 0;
+                        line-height: 1;
+                        transition: all 0.4s;
+
+                        @include bp(xsx) {
+                            font-size: 10px;
+                        }
+
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copy-right {
+            text-align: center;
+            color: #d9d9d9;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.top-footer {
+    .widget {
+        margin-bottom: 0;
+        color: #D9D9D9;
+
+        .widget-title {
+            color: $light-color;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        ul {
+            li {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: #D9D9D9;
+                    display: inline-block;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(lgx) {
+        .widget {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer-join-us {
+        padding: 30px;
+        border: 3px solid rgba($light-color, 0.18);
+        border-radius: 25px;
+        margin-left: 40px;
+
+        @include bp(lgx) {
+            margin: 0;
+        }
+
+        .footer-form {
+            input {
+                background-color: $light-color;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

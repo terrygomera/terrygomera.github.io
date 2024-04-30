@@ -1,0 +1,82 @@
+.home-count-timmer {
+    margin-top: -70px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 3;
+
+    .time-counter-wrap {
+        background-color: $light-color;
+        box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.15);
+        padding: 30px 20px;
+        border-radius: 25px;
+
+        .time-counter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .counter-time {
+                flex-grow: 1;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                span {
+                    display: block;
+                    font-family: $title-font;
+                    font-size: 60px;
+                    font-weight: 700;
+                    color: $sub-secondary-color;
+                    line-height: 1.2;
+                    text-align: center;
+                }
+
+                .label-text {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    @include bp(lgx) {
+        margin-top: 0;
+    }
+
+    @include bp(mdx) {
+        margin-bottom: 60px;
+        margin-top: -30px;
+
+        .time-counter-wrap {
+            .time-counter {
+                .counter-time {
+                    span {
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(xsx) {
+        .time-counter-wrap {
+            padding: 30px 0;
+
+            .time-counter {
+                .counter-time {
+                    padding: 5px;
+                    .counter-days {
+                        font-size: 28px;
+                    }
+
+                    .label-text {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+.about-section {
+    margin-bottom: 110px;
+
+    .section-head {
+        margin-bottom: 0;
+
+        .section-title {
+            margin-bottom: 0;
+        }
+    }
+
+    .about-img {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 65% auto;
+        align-items: center;
+
+        .about-left-img {
+            position: relative;
+            border-radius: 25px;
+            background-image: url(assets/img/eventum-img9.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            min-height: 410px;
+            overflow: hidden;
+
+            .video-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% - 25px), -50%);
+            }
+        }
+
+        .about-right-img {
+            margin-left: -50px;
+            border-radius: 25px;
+            border: 10px solid $light-color;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    .iconbox-container-bg {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 45px;
+        grid-row-gap: 30px;
+        margin-top: 60px;
+
+        .iconbox-item-bg {
+            padding: 35px;
+            background-color: #f8f8f8;
+            text-align: center;
+            border-radius: 25px;
+            overflow: hidden;
+
+            .iconbox-content-bg {
+                i {
+                    width: 100px;
+                    height: 100px;
+                    line-height: 99px;
+                    display: inline-block;
+                    background-color: $primary-color;
+                    color: $light-color;
+                    text-align: center;
+                    margin-bottom: 25px;
+                    border-radius: 50%;
+                    font-size: 50px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include bp(lgx) {
+        .iconbox-container-bg {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+
+            .item-3 {
+                grid-column: 1/span 2;
+                max-width: 455px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @include bp(mdx) {
+    	margin-bottom: 60px;
+        .about-img {
+            grid-template-columns: auto;
+
+            .about-left-img {
+                border: 5px solid $light-color;
+                .video-button{
+                	    transform: translate(calc(-50% - 0px), -50%);
+                }
+            }
+            .about-right-img {
+                margin: 20px 0 0;
+                border: 5px solid $light-color;
+            }
+        }
+    }
+    @include bp(smx){
+    	.about-img {
+    		.about-left-img {
+    			min-height: 250px;
+    		}
+    	}
+    	.iconbox-container-bg {
+            grid-template-columns: auto;
+            justify-content: center;
+            margin-top: 30px;
+
+            .item-3 {
+                grid-column: 1;
+                max-width: 100%;
+            }
+            .iconbox-item-bg {
+            	.iconbox-content-bg {
+            		i {
+            			height: 80px;
+            			width: 80px;
+            			line-height: 78px;
+            			font-size: 40px;
+            		}
+            	}
+            }
+        }
+    }
+}
+
+.about-mission-and-aim {
+
+    .about-purpose {
+        display: flex;
+        align-items: center;
+
+        .about-banner-image {
+            flex-basis: 46%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            .overlay-circle {
+                background-image: url(assets/img/circle.png);
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0.2;
+            }
+
+            img {
+                width: 80%;
+            }
+        }
+
+        .mission-and-aim-inside {
+            flex-basis: 54%;
+
+            .about-mission-content {
+                padding-bottom: 60px;
+                padding-left: 60px;
+
+                .section-head {
+                    margin-bottom: 40px;
+                }
+
+                .faq-widget {
+                    .accordion-content {
+                        .card {
+                            box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.1);
+
+                            .mb-0 {
+                                a {
+                                    padding: 22px;
+                                    font-size: 15px;
+                                    line-height: 1.2;
+                                    color: #111;
+                                    @include bp(mdx) {
+                                    	font-size: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(mdx) {
+        .about-purpose {
+            flex-wrap: wrap;
+            padding: 0 12px;
+            .about-banner-image,
+            .mission-and-aim-inside {
+                flex-basis: 100%;
+            }
+            .about-banner-image {
+            	order: 2;
+            }
+            .mission-and-aim-inside {
+                .about-mission-content {
+                    padding-left:  0;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}
