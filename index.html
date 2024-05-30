@@ -58,9 +58,22 @@
         transition: all 0.4s;
     }
 
+/* Medium screens (e.g., tablets) */
+@media (min-width: 600px) {
+    .home-event-section .type-of-event-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 992px) {
+    .home-event-section .type-of-event-wrap {
+        grid-template-columns: repeat(3, 1fr); /* Example for three columns on large screens */
+    }
+}
     .home-event-section .type-of-event-wrap {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 12px;
         grid-row-gap: 12px;
     }
